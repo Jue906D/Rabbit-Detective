@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using FluffyUnderware.Curvy.Controllers;
 using TMPro;
 using UnityEngine;
@@ -19,8 +20,20 @@ public class GameManager : MonoBehaviour
     public TimeSlider Slider;
     public TextMeshProUGUI TimeNowText;
     public TextMeshProUGUI TimeAllText;
+    [Header("UI槽列表")]
+    public List<GameObject> ItemSlotList;
+    [Header("场景移动对象列表")]
+    public List<GameObject> MoveList;
+    [Header("Item列表")]
+    public List<GameObject> ItemList;
+
+
     void Awake()
     {
+        //.Log("init");
+        ItemSlotList = new List<GameObject>(20);
+        MoveList = new List<GameObject>(20);
+        ItemList = new List<GameObject>(20);
         instance = this;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
