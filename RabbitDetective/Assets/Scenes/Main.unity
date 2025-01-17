@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107a33fdf49ca37488e81c2f793967ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckTime: 20
+  CheckTime: 4
   CheckPointLines:
   - spoint: {fileID: 2114713546}
     cType: 0
@@ -516,6 +516,7 @@ MonoBehaviour:
   isChecked: 0
   imgFBGroup_01: {fileID: 400056432}
   imgFBGroup_02: {fileID: 0}
+  FBTime: 1
 --- !u!1 &151615058
 GameObject:
   m_ObjectHideFlags: 0

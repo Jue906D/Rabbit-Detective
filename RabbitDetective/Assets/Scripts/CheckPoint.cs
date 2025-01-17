@@ -30,6 +30,7 @@ public class CheckPoint : MonoBehaviour
     [Header("ckpt关联反馈")]
     public GameObject imgFBGroup_01;
     public GameObject imgFBGroup_02;
+    public float FBTime;
     private List<GameObject> imgFBGroup;
     public bool Check()
     {
@@ -84,7 +85,7 @@ public class CheckPoint : MonoBehaviour
     {
         // 设置为暂停状态
         GameManager.instance.isPaused = true;
-        StartCoroutine(ActivateChildrenCoroutine(parentObject,2f));
+        StartCoroutine(ActivateChildrenCoroutine(parentObject, FBTime));
     }
     private IEnumerator ActivateChildrenCoroutine(GameObject parentObject,float seconds)
     {
