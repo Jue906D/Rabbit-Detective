@@ -1,16 +1,12 @@
 using UnityEngine;
 
-public class ItemSlot : MonoBehaviour
+public class PlotSlot : MonoBehaviour
 {
+    public Item CurItem;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void OnEnable()
+    void Start()
     {
-        GameManager.instance.ItemSlotList.Add(gameObject);
-    }
-
-    void OnDisable()
-    {
-        GameManager.instance.ItemSlotList.Remove(gameObject);
+        
     }
 
     // Update is called once per frame

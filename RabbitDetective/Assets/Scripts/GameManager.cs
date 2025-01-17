@@ -20,21 +20,38 @@ public class GameManager : MonoBehaviour
     public TimeSlider Slider;
     public TextMeshProUGUI TimeNowText;
     public TextMeshProUGUI TimeAllText;
-    [Header("UI槽列表")]
-    public List<GameObject> ItemSlotList;
+    public Button StartGameButton;
+    public Button ResetButton;
+    public BackPack backPack;
     [Header("场景移动对象列表")]
     public List<GameObject> MoveList;
-    [Header("Item列表")]
-    public List<GameObject> ItemList;
-
+    [Header("UI槽列表")]
+    public List<ItemSlot> ItemSlotList;
+    
+    [Header("交互槽列表")]
+    public Dictionary<string,Point> PointDict;
+    [Header("Item字典")]
+    public Dictionary<string,Item> ItemDict;
+    [Header("Level序列")]
+    public Level CurLevel;
+    public List<Level> LevelList;
+    
 
     void Awake()
     {
         //.Log("init");
-        ItemSlotList = new List<GameObject>(20);
+        ItemSlotList = new List<ItemSlot>(20);
+        PointDict = new Dictionary<string, Point>(40);
         MoveList = new List<GameObject>(20);
-        ItemList = new List<GameObject>(20);
+        ItemDict = new Dictionary<string, Item>(40);
         instance = this;
+        foreach (var level in LevelList)
+        {
+            level.LevelObject.SetActive(false);
+        }
+        StartGameButton.onClick.AddListener(ChangeLevel);
+        ResetButton.onClick.AddListener(ResetLevel);
+        ChangeLevel();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -63,17 +80,76 @@ public class GameManager : MonoBehaviour
     {
         StartScreen.SetActive(false);
         isPaused = false;
+        //SpawnItemInitScene();
+        ChangeLevel();
     }
 
+    public void ChangeLevel()
+    {
+        if (CurLevel is not null)
+        {
+            CurLevel.LeaveLevel();
+            for (int i = 0; i < LevelList.Count; i++)
+            {
+                if (LevelList[i] == CurLevel)
+                {
+                    CurLevel = LevelList[(i+1)%LevelList.Count];
+                    break;
+                }
+            }
+        }
+        else
+        {
+            CurLevel = LevelList[0];
+        }
+        CurLevel.StartLevel();
+    }
+
+    public void ResetLevel()
+    {
+        if (CurLevel is not null)
+        {
+            CurLevel.ResetLevel();
+        }
+    }
+
+    public void PauseGame()
+    {
+        isPaused = true;
+    }
     public void BackToMainMenu()
     {
         StartScreen.SetActive(true);
     }
-
     public void OnSliderClicked()
     {
         isPaused = true;
         TimeNow = Slider.value * TimeAll;
         TimeNowText.text = TimeNow.ToString("0.00");
+        float time;
+    }
+    public Item TryGetItem(string itemName)
+    {
+        if (ItemDict.TryGetValue(itemName, out Item item))
+        {
+            return item;
+        }
+        else
+        {
+            Debug.LogError($"尝试获取未注册的Item对象：{itemName}");
+            return null;
+        }
+    }
+    public Point TryGetPoint(string pointName)
+    {
+        if (PointDict.TryGetValue(pointName, out Point point))
+        {
+            return point;
+        }
+        else
+        {
+            Debug.LogError($"尝试获取未注册的Point对象：{pointName}");
+            return null;
+        }
     }
 }

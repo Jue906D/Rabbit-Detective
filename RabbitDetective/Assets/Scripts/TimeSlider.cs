@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Slider))]
 public class TimeSlider : Slider, IDragHandler 
 {
-    public void OnDrag(PointerEventData eventData)
+    public override void OnDrag(PointerEventData eventData)
     {
         
         base.OnDrag(eventData);
