@@ -69,9 +69,9 @@ public class Item : MonoBehaviour
             {
                 foreach (Collider2D collider2 in collider)
                 {
-                    if (collider2.gameObject.name == gameObject.name)
+                    if (collider2.gameObject.GetComponent<Item>() is not null)
                     {
-                        Debug.Log($"跳过本体{collider2.name}");
+                        Debug.Log($"射线跳过物体{collider2.name}");
                         continue;
                     }
                     else
@@ -137,5 +137,13 @@ public class Item : MonoBehaviour
             AttachToPoint(uiPoint);
             Debug.Log($"{gameObject.name}不允许交互回到背包{uiPoint.gameObject.name}");
         }
+    }
+
+    public void BackToPack()
+    {
+        state = ItemState.InPack;
+        UIPoint uiPoint = GameManager.instance.backPack.GetFreeUIPoint();
+        AttachToPoint(uiPoint);
+        Debug.Log($"{gameObject.name}被挤回到背包{uiPoint.gameObject.name}");
     }
 }

@@ -19,6 +19,10 @@ public class Point : MonoBehaviour
     }
     public virtual void AttachItem(Item item)
     {
+        if (CurItem is not null)
+        {
+            DetachItemToUI(CurItem);
+        }
         CurItem = item;
         item.transform.SetParent(PointObject.transform);
         item.transform.localPosition = Vector3.zero;
@@ -26,6 +30,15 @@ public class Point : MonoBehaviour
 
     public virtual void DetachItem(Item item)
     {
+        Debug.Log($"物体{item.gameObject.name}从{this.gameObject.name}离开");
+        //item.BackToPack();
+        CurItem = null;
+    }
+    
+    public virtual void DetachItemToUI(Item item)
+    {
+        Debug.Log($"物体{item.gameObject.name}从{this.gameObject.name}离开");
+        item.BackToPack();
         CurItem = null;
     }
 }
