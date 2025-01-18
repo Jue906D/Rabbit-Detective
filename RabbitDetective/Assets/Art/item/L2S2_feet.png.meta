@@ -122,11 +122,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 123
-        width: 128
-        height: 102
+        y: 0
+        width: 217
+        height: 241
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -148,7 +148,7 @@ TextureImporter:
         width: 16
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,7 +170,7 @@ TextureImporter:
         width: 41
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -192,7 +192,7 @@ TextureImporter:
         width: 41
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,7 +214,7 @@ TextureImporter:
         width: 29
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 64
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -258,7 +258,7 @@ TextureImporter:
         width: 48
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -275,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2008b3aa8f81cd74483b059696ae61ac
     internalID: 0
     vertices: []
     indices: 
@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      L2S2_feet_0: 1307784157744484890
+      L2S2_feet_1: -6817195092923738401
+      L2S2_feet_2: 1451098154961510379
+      L2S2_feet_3: 2434121380285962200
+      L2S2_feet_4: 9006251166417417429
+      L2S2_feet_5: -2868675851093952630
+      L2S2_feet_6: -8769484718442577818
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
