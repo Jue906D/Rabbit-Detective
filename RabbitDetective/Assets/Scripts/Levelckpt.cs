@@ -6,7 +6,7 @@ public class Levelckpt : MonoBehaviour
     [Header("level01")]
     public bool L1S1Tabel_book;
     public bool L1S1Adam_knife;
-    public bool L1S1Pic-null;
+    public bool L1S1Pic_null;
 
     [Header("level02")]
     public bool ckpt1;//ª¢Ω≈”°
@@ -18,7 +18,7 @@ public class Levelckpt : MonoBehaviour
 
     public bool Level1CKPTResultHE ()
     {
-        if (L1S1Tabel_book && L1S1Adam_knife && L1S1Pic)
+        if (L1S1Tabel_book && L1S1Adam_knife && L1S1Pic_null)
         {
             return true;
         }
