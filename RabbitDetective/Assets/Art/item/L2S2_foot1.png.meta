@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 28bf15bcb4305994f84a4ac2be09def4
+guid: 8728be77aaf25af49970514b532c31c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9197134654715703934
-    second: test1_0
+      213: 7644664674121645519
+    second: L2S2_foot1_0
+  - first:
+      213: 3795402700054785030
+    second: L2S2_foot1_1
+  - first:
+      213: -785077960278386065
+    second: L2S2_foot1_2
+  - first:
+      213: 8786604608801395198
+    second: L2S2_foot1_3
+  - first:
+      213: 3994939307149101675
+    second: L2S2_foot1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: test1_0
+      name: L2S2_foot1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1280
-        height: 498
+        y: 2
+        width: 128
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28d4c3292c63d5080800000000000000
-      internalID: -9197134654715703934
+      spriteID: fcd7ff7940e471a60800000000000000
+      internalID: 7644664674121645519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L2S2_foot1_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 89
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ce25495aafba430800000000000000
+      internalID: 3795402700054785030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L2S2_foot1_2
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 62
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a5e9031c7da15f0800000000000000
+      internalID: -785077960278386065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L2S2_foot1_3
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 74
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1da69965a40f970800000000000000
+      internalID: 8786604608801395198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L2S2_foot1_4
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 42
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a0edd3220e07730800000000000000
+      internalID: 3994939307149101675
       vertices: []
       indices: 
       edges: []
@@ -134,8 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      test1_0: -9197134654715703934
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
