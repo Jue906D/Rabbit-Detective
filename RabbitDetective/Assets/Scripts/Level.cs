@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Level : MonoBehaviour
 {
+
     [Header("场景总时长")]
     public float LevelTime;
     [Header("场景预制初始对象")]
@@ -19,6 +21,7 @@ public class Level : MonoBehaviour
 
     [Header("检查点")]
     public List<CheckPoint> CheckPointsList;
+    
     //[Header("场景Ending列表")]
     //public List<Ending> EndingList;
     public void StartLevel()
@@ -77,17 +80,20 @@ public class Level : MonoBehaviour
         //return GameManager.instance.TryGetLevel("Level2_Scene01");
         if (LevelObject.gameObject.name == "Level1")
         {
+            Levelckpt.instance.GetLv1CKPT(CheckPointsList);
             if (Levelckpt.instance.Level1CKPTResultHE())
             {
+                Debug.Log("level 1通过，进2");
                 return GameManager.instance.TryGetLevel("Level2");
             }
             else
             {
-                return GameManager.instance.TryGetLevel("DefaultBadEnding");
+                return GameManager.instance.TryGetLevel("DefaultBadEnding_1");
             }
         }
         else if (LevelObject.gameObject.name == "Level2")
         {
+            //ckpt.GetLv2CKPT(CheckPointsList);
             if (Levelckpt.instance.Leve2CKPTResultHE())
             {
                 return GameManager.instance.TryGetLevel("Level3");
