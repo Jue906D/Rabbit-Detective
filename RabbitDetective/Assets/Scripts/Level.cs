@@ -67,11 +67,22 @@ public class Level : MonoBehaviour
         }
     }
 
+    public Level TryChangeLevel()
+    {
+        //test
+        return GameManager.instance.TryGetLevel("Level2_Scene01");
+    }
+    
     public void Update()
     {
         if (GameManager.instance.CurLevel != this)
         {
             return;
+        }
+
+        if (GameManager.instance.TimeNow >= GameManager.instance.TimeAll)
+        {
+            GameManager.instance.ChangeLevel(TryChangeLevel());
         }
         foreach (var cp in CheckPointsList)
         {

@@ -22,9 +22,9 @@ public class Item : MonoBehaviour
     }
     public ItemState state = ItemState.InPack;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    void Start()
     {
-        
+        CurPoint = SpawnPoint;
     }
 
     void OnEnable()
@@ -104,6 +104,7 @@ public class Item : MonoBehaviour
     {
         if (CurPoint != null)
         {
+            Debug.Log($"从当前{CurPoint.gameObject.name}离开");
             CurPoint.DetachItem(this);
             CurPoint = null;
         }

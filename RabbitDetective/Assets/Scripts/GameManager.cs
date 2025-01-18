@@ -105,6 +105,13 @@ public class GameManager : MonoBehaviour
         CurLevel.StartLevel();
     }
 
+    public void ChangeLevel(Level newLevel)
+    {
+        CurLevel.LeaveLevel();
+        CurLevel = newLevel;
+        CurLevel.StartLevel();
+    }
+
     public void ResetLevel()
     {
         if (CurLevel is not null)
@@ -151,5 +158,17 @@ public class GameManager : MonoBehaviour
             Debug.LogError($"尝试获取未注册的Point对象：{pointName}");
             return null;
         }
+    }
+    
+    public Level TryGetLevel(string levelName)
+    {
+        foreach (var level in LevelList)
+        {
+            if (level.LevelObject.gameObject.name == levelName)
+            {
+                return level;    
+            }
+        }
+        return null;    
     }
 }

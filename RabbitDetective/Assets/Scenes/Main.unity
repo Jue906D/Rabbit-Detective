@@ -2164,20 +2164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 
   ShowGizmos: 1
-  ControlPoints:
-  - {fileID: 1129709176}
-  - {fileID: 1334733175}
-  - {fileID: 1471060727}
-  - {fileID: 265065885}
-  - {fileID: 1549406634}
-  - {fileID: 934670757}
-  - {fileID: 81497128}
-  - {fileID: 1687616101}
-  - {fileID: 1783642762}
-  - {fileID: 1893228729}
-  - {fileID: 1796302727}
-  - {fileID: 107021619}
-  - {fileID: 320939629}
+  ControlPoints: []
   m_Interpolation: 3
   m_RestrictTo2D: 0
   restricted2DPlane: 0
@@ -2533,23 +2520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 
   ShowGizmos: 1
-  ControlPoints:
-  - {fileID: 2095399118}
-  - {fileID: 1444441004}
-  - {fileID: 63255043}
-  - {fileID: 1443320902}
-  - {fileID: 564231876}
-  - {fileID: 1468023057}
-  - {fileID: 298359805}
-  - {fileID: 191858654}
-  - {fileID: 2038557378}
-  - {fileID: 276487828}
-  - {fileID: 1211781373}
-  - {fileID: 627769027}
-  - {fileID: 1718742138}
-  - {fileID: 1092826984}
-  - {fileID: 1677801349}
-  - {fileID: 229236276}
+  ControlPoints: []
   m_Interpolation: 3
   m_RestrictTo2D: 0
   restricted2DPlane: 0
@@ -7590,7 +7561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe442d2176712149869def3492227b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelTime: 60
+  LevelTime: 15
   LevelObject: {fileID: 321523452}
   PointList:
   - {fileID: 662542675}
@@ -8675,7 +8646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe442d2176712149869def3492227b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelTime: 60
+  LevelTime: 15
   LevelObject: {fileID: 1752358688}
   PointList:
   - {fileID: 475636377}
@@ -12818,7 +12789,7 @@ MonoBehaviour:
   LevelList:
   - {fileID: 2051958018}
   - {fileID: 859126385}
-  - {fileID: 859126385}
+  - {fileID: 787856380}
   - {fileID: 859126385}
   - {fileID: 859126385}
 --- !u!1 &1224164073
@@ -19928,7 +19899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1752358689
 RectTransform:
   m_ObjectHideFlags: 0

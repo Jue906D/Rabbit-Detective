@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      L3S1_scream_0: -6717229276996431513
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

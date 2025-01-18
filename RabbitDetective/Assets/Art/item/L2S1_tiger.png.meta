@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      L2S1_tiger_0: 262752577279665117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
