@@ -81,24 +81,25 @@ public class Level : MonoBehaviour
                 if (isPass)
                 {
                     cp.isChecked = true;
-                    if (GameManager.instance.isPaused == true)
-                    {
-                        GameManager.instance.isPaused = false;
-                    }
+                    // if (GameManager.instance.isPaused == true)
+                    // {
+                    //     GameManager.instance.isPaused = false;
+                    // }
                     Debug.Log($"通过Check{cp.gameObject.name}_{cp.CheckTime}");
                 }
                 else
                 {
-                    if (GameManager.instance.TimeNow > cp.CheckTime || GameManager.instance.isPaused == false)
-                    {
-                        GameManager.instance.TimeNow = cp.CheckTime;
-                        Debug.Log($"已回到检查点{cp.gameObject.name}_{cp.CheckTime}");
-                    }
-                    if (GameManager.instance.isPaused == false)
-                    {
-                        Debug.Log($"未通过Check{cp.gameObject.name}_{cp.CheckTime}，已暂停");
-                        GameManager.instance.isPaused = true;
-                    }
+                    // if (GameManager.instance.TimeNow > cp.CheckTime || GameManager.instance.isPaused == false)
+                    // {
+                    //     GameManager.instance.TimeNow = cp.CheckTime;
+                    //     Debug.Log($"已回到检查点{cp.gameObject.name}_{cp.CheckTime}");
+                    // }
+                    // if (GameManager.instance.isPaused == false)
+                    // {
+                    //     Debug.Log($"未通过Check{cp.gameObject.name}_{cp.CheckTime}，已暂停");
+                    //     GameManager.instance.isPaused = true;
+                    // }
+                    Debug.Log($"未通过Check{cp.gameObject.name}_{cp.CheckTime}");
                 }
             }
         }
