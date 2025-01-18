@@ -58,7 +58,7 @@ public class Level : MonoBehaviour
     {
         foreach (var item in ItemList)
         {
-            var point = GameManager.instance.TryGetPoint(item.SpawnPoint);
+            var point = GameManager.instance.TryGetPoint(item.SpawnPoint.gameObject.name);
             if (point is not null)
             {
                 point.AttachItem(item);

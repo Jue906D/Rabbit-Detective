@@ -7,7 +7,8 @@ using UnityEngine.UI;
 [System.Serializable]  
 public class CheckPointLine 
 {  
-    public ScenePoint spoint;  
+    public ScenePoint spoint;
+    public Item ritem;  
     public checkType cType;  
 } 
 public enum checkType{
@@ -32,17 +33,29 @@ public class CheckPoint : MonoBehaviour
     public GameObject imgFBGroup_02;
     public float FBTime;
     private List<GameObject> imgFBGroup;
+
+    public bool CheckItem(CheckPointLine cpl)
+    {
+        if (cpl.ritem == null)
+        {
+            return cpl.spoint.CurItem is null;
+        }
+        else
+        {
+            return cpl.spoint.CurItem == cpl.ritem;
+        }
+    }
     public bool Check()
     {
         bool check = false;
-        bool acheck = true;
+        bool acheck = false;
         foreach (var checkPointLine in CheckPointLines)
         {
             var p = checkPointLine.spoint;
             switch (checkPointLine.cType)
             {
                 case checkType.And:
-                    if (p.CurItem != p.RightItem)
+                    if (!CheckItem(checkPointLine))
                     {
                         return false;
                     }
@@ -52,13 +65,13 @@ public class CheckPoint : MonoBehaviour
                     }
                     break;
                 case checkType.Or:
-                    if (p.CurItem == p.RightItem)
+                    if (CheckItem(checkPointLine))
                     {
                         check = true;
                     }
                     break;
                 case checkType.Single:
-                    if (p.CurItem.gameObject.name == p.RightItem.name)
+                    if (CheckItem(checkPointLine))
                     {
                         return true;
                     }
@@ -68,7 +81,7 @@ public class CheckPoint : MonoBehaviour
                     }
             }
         }
-        return acheck ;
+        return acheck || check; 
     }
 
 

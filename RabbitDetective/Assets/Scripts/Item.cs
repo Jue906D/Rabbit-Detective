@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     private Vector2 offset = Vector2.zero;
     
     [Header("初始位置")]
-    public string SpawnPoint;
+    public Point SpawnPoint;
     //[Header("从属位置")]
     //public string RightPoint;
     [Header("当前位置")]
