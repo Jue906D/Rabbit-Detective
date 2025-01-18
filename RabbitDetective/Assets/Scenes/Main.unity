@@ -1313,8 +1313,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232, y: 104.07}
-  m_SizeDelta: {x: 263.93, y: 208.14}
+  m_AnchoredPosition: {x: 181.98, y: 142.05}
+  m_SizeDelta: {x: 363.97, y: 284.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151615060
 MonoBehaviour:
@@ -8445,7 +8445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107a33fdf49ca37488e81c2f793967ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckTime: 13
+  CheckTime: 12
   CheckPointLines:
   - spoint: {fileID: 2114713546}
     ritem: {fileID: 215610953}
@@ -8690,6 +8690,9 @@ MonoBehaviour:
   isSceneLevel: 1
   CheckPointsList:
   - {fileID: 125246390}
+  - {fileID: 1147951478}
+  - {fileID: 829470642}
+  - {fileID: 869541956}
 --- !u!1 &869541954
 GameObject:
   m_ObjectHideFlags: 0
@@ -12023,7 +12026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107a33fdf49ca37488e81c2f793967ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckTime: 8
+  CheckTime: 8.1
   CheckPointLines:
   - spoint: {fileID: 733010352}
     ritem: {fileID: 373858962}
@@ -22541,7 +22544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 259, y: -305}
+  m_AnchoredPosition: {x: 233, y: -288}
   m_SizeDelta: {x: 207.73, y: 217.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2114713546

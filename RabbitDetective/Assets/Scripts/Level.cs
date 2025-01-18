@@ -85,7 +85,7 @@ public class Level : MonoBehaviour
                     // {
                     //     GameManager.instance.isPaused = false;
                     // }
-                    Debug.Log($"通过Check{cp.gameObject.name}_{cp.CheckTime}");
+                    //Debug.Log($"通过Check{cp.gameObject.name}_{cp.CheckTime}");
                     cp.ActivateChildrenInOrder(cp.imgFBGroup_01);
                 }
                 else
@@ -100,7 +100,7 @@ public class Level : MonoBehaviour
                     //     Debug.Log($"未通过Check{cp.gameObject.name}_{cp.CheckTime}，已暂停");
                     //     GameManager.instance.isPaused = true;
                     // }
-                    Debug.Log($"未通过Check{cp.gameObject.name}_{cp.CheckTime}");
+                    //Debug.Log($"未通过Check{cp.gameObject.name}_{cp.CheckTime}");
                 }
             }
         }
