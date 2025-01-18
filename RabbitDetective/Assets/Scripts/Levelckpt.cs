@@ -45,6 +45,19 @@ public class Levelckpt : MonoBehaviour
         return false;//�ؿ�1Ĭ��BE-�Ժ�
     }
 
+
+
+    public void GetLv2CKPT(List<CheckPoint> list)
+    {
+        CheckPointsListLv1 = list;
+        ckpt1 = CheckPointsListLv1[0];
+        ckpt2 = CheckPointsListLv1[1];
+        ckpt3 = CheckPointsListLv1[2];
+        ckpt4 = CheckPointsListLv1[3];
+        ckpt5 = CheckPointsListLv1[4];
+        ckpt6 = CheckPointsListLv1[5];
+    }
+
     public bool Leve2CKPTResultHE()
     {
         if (ckpt1)
@@ -59,41 +72,53 @@ public class Levelckpt : MonoBehaviour
         {
             return true;
         }
-
-        return false;//�ؿ�2Ĭ��BE-����
+        else
+        {
+            return false;//�ؿ�2Ĭ��BE-����
+        }
+        
     }
 
     public bool Level2CKPTResultBE1()
     {
-        if (ckpt4&&(!Leve2CKPTResultHE()))
+        if (ckpt4)
         {
 
             return true;
         }
+        else
+        {
+            return false;//�ؿ�2Ĭ��BE-����
+        }
 
-
-        return false;//�ؿ�2Ĭ��BE-����
+        
     }
     public bool Level2CKPTResultBE2()
     {
 
-        if (ckpt3 && (!Level2CKPTResultBE1()))
+        if (ckpt3 )
         {
 
             return true;
         }
-
-        return false;//�ؿ�2Ĭ��BE-����
+        else
+        {
+            return false;//�ؿ�2Ĭ��BE-����
+        }
+        
     }
     public bool Level2CKPTResultBE3()
     {
 
-        if (ckpt5 && (!Level2CKPTResultBE2()))
+        if (ckpt5)
         {
 
             return true;
         }
-
-        return false;//�ؿ�2Ĭ��BE-����
+        else
+        {
+            return false;//�ؿ�2Ĭ��BE-����
+        }
+        
     }
 }

@@ -88,24 +88,43 @@ public class Level : MonoBehaviour
             }
             else
             {
+                Debug.Log("level 1没通过，进DBE1");
                 return GameManager.instance.TryGetLevel("DefaultBadEnding_1");
             }
         }
         else if (LevelObject.gameObject.name == "Level2")
         {
-            //ckpt.GetLv2CKPT(CheckPointsList);
+            Levelckpt.instance.GetLv2CKPT(CheckPointsList);
             if (Levelckpt.instance.Leve2CKPTResultHE())
             {
+                Debug.Log("level 2通过，进3");
                 return GameManager.instance.TryGetLevel("Level3");
+            }
+            else if (Levelckpt.instance.Level2CKPTResultBE1())
+            {
+                Debug.Log("level 2没通过，进BE1");
+                return GameManager.instance.TryGetLevel("LevelBadEnding _1");
+            }
+            else if (Levelckpt.instance.Level2CKPTResultBE2())
+            {
+                Debug.Log("level 2没通过，进BE2");
+                return GameManager.instance.TryGetLevel("LevelBadEnding _2");
+            }
+            else if (Levelckpt.instance.Level2CKPTResultBE3())
+            {
+                Debug.Log("level 2没通过，进BE3");
+                return GameManager.instance.TryGetLevel("LevelBadEnding _3");
             }
             else
             {
-                return GameManager.instance.TryGetLevel("DefaultBadEnding");
+                Debug.Log("level 2没通过，进DBE2");
+                return GameManager.instance.TryGetLevel("DefaultBadEnding_2");
             }
         }
         else
         {
-            return GameManager.instance.TryGetLevel("DefaultBadEnding");
+            Debug.Log("配置有问题，进常规BE，但是显示迷糊");
+            return GameManager.instance.TryGetLevel("DefaultBadEnding_1");
         }
     }
     
@@ -134,7 +153,12 @@ public class Level : MonoBehaviour
                     //     GameManager.instance.isPaused = false;
                     // }
                     //Debug.Log($"通过Check{cp.gameObject.name}_{cp.CheckTime}");
-                    cp.ActivateChildrenInOrder(cp.imgFBGroup_01);
+                    if (cp.imgFBGroup_01 != null)
+                    {
+                        cp.ActivateChildrenInOrder(cp.imgFBGroup_01);
+                    }
+
+                    
                 }
                 else
                 {

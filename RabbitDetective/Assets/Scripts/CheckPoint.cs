@@ -89,13 +89,19 @@ public class CheckPoint : MonoBehaviour
     {
         if (isCkptTrue)
         {
-            ActivateChildrenInOrder(imgFBGroup_01);
+            if (imgFBGroup_01 != null)
+            {
+                ActivateChildrenInOrder(imgFBGroup_01);
+            }
+            
         }
         
     }
 
     public void ActivateChildrenInOrder(GameObject parentObject)
     {
+
+
         // 设置为暂停状态
         GameManager.instance.isPaused = true;
         StartCoroutine(ActivateChildrenCoroutine(parentObject, FBTime));
