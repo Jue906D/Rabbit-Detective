@@ -86,6 +86,7 @@ public class Level : MonoBehaviour
                     //     GameManager.instance.isPaused = false;
                     // }
                     Debug.Log($"通过Check{cp.gameObject.name}_{cp.CheckTime}");
+                    cp.ActivateChildrenInOrder(cp.imgFBGroup_01);
                 }
                 else
                 {
