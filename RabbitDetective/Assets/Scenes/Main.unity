@@ -10030,8 +10030,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c82f0901a469444b36c3e4e51c9fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartTime: 5
-  EndTime: 8
+  StartTime: 3
+  EndTime: 5
   SceneObject: {fileID: 1833925546}
   LastSceneObject: {fileID: 0}
   NextSceneObject: {fileID: 0}
@@ -13521,7 +13521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartTime: 0
-  EndTime: 5
+  EndTime: 3
   SceneObject: {fileID: 1733284554}
   LastSceneObject: {fileID: 0}
   NextSceneObject: {fileID: 1833925546}
@@ -23986,7 +23986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4451385422083165524, guid: afc9dc1e12f65484daa742298c9c4b9a, type: 3}
+  m_Sprite: {fileID: -6974474636625040735, guid: ddd7d83981ec16d46bda36d1578133ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
