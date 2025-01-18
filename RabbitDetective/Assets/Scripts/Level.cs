@@ -103,22 +103,46 @@ public class Level : MonoBehaviour
             else if (Levelckpt.instance.Level2CKPTResultBE1())
             {
                 Debug.Log("level 2没通过，进BE1");
-                return GameManager.instance.TryGetLevel("LevelBadEnding _1");
+                return GameManager.instance.TryGetLevel("Level2BadEnding_1");
             }
             else if (Levelckpt.instance.Level2CKPTResultBE2())
             {
                 Debug.Log("level 2没通过，进BE2");
-                return GameManager.instance.TryGetLevel("LevelBadEnding _2");
+                return GameManager.instance.TryGetLevel("Level2BadEnding_2");
             }
             else if (Levelckpt.instance.Level2CKPTResultBE3())
             {
                 Debug.Log("level 2没通过，进BE3");
-                return GameManager.instance.TryGetLevel("LevelBadEnding _3");
+                return GameManager.instance.TryGetLevel("Level2BadEnding_3");
             }
             else
             {
                 Debug.Log("level 2没通过，进DBE2");
                 return GameManager.instance.TryGetLevel("DefaultBadEnding_2");
+            }
+        }
+        else if (LevelObject.gameObject.name == "Level3")
+        {
+            Levelckpt.instance.GetLv3CKPT(CheckPointsList);
+            if (Levelckpt.instance.Leve3CKPTResultHE())
+            {
+                Debug.Log("level 3通过，进4");
+                return GameManager.instance.TryGetLevel("Level4");
+            }
+            else if (Levelckpt.instance.Level3CKPTResultBE1())
+            {
+                Debug.Log("level 3没通过，进BE1");
+                return GameManager.instance.TryGetLevel("Level3BadEnding_1");
+            }
+            else if (Levelckpt.instance.Level3CKPTResultBE2())
+            {
+                Debug.Log("level 3没通过，进BE2");
+                return GameManager.instance.TryGetLevel("Level3BadEnding_2");
+            }
+            else
+            {
+                Debug.Log("level 3没通过，应该进DBE3");
+                return GameManager.instance.TryGetLevel("DefaultBadEnding_3");
             }
         }
         else

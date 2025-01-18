@@ -20,6 +20,13 @@ public class Levelckpt : MonoBehaviour
     public bool ckpt6;//��ȡ��
     public List<CheckPoint> CheckPointsListLv2;
 
+    [Header("level03")]
+    public bool ckpt_box;
+    public bool ckpt_scream;
+    public bool ckpt_bus;
+    public List<CheckPoint> CheckPointsListLv3;
+
+
     public static Levelckpt instance;
     
      void Awake()
@@ -31,9 +38,9 @@ public class Levelckpt : MonoBehaviour
     public void GetLv1CKPT(List<CheckPoint> list)
     {
         CheckPointsListLv1 = list;
-        L1S1Tabel_book = CheckPointsListLv1[0];
-        L1S1Adam_knife = CheckPointsListLv1[1];
-        L1S1Pic_null = CheckPointsListLv1[2];
+        L1S1Tabel_book = CheckPointsListLv1[1].isChecked;
+        L1S1Adam_knife = CheckPointsListLv1[2].isChecked;
+        L1S1Pic_null = CheckPointsListLv1[3].isChecked;
     }
 
     public bool Level1CKPTResultHE ()
@@ -49,14 +56,25 @@ public class Levelckpt : MonoBehaviour
 
     public void GetLv2CKPT(List<CheckPoint> list)
     {
-        CheckPointsListLv1 = list;
-        ckpt1 = CheckPointsListLv1[0];
-        ckpt2 = CheckPointsListLv1[1];
-        ckpt3 = CheckPointsListLv1[2];
-        ckpt4 = CheckPointsListLv1[3];
-        ckpt5 = CheckPointsListLv1[4];
-        ckpt6 = CheckPointsListLv1[5];
+        CheckPointsListLv2 = list;
+        ckpt1 = CheckPointsListLv2[0].isChecked;
+        ckpt2 = CheckPointsListLv2[1].isChecked;
+        ckpt3 = CheckPointsListLv2[2].isChecked;
+        ckpt4 = CheckPointsListLv2[3].isChecked;
+        ckpt5 = CheckPointsListLv2[4].isChecked;
+        ckpt6 = CheckPointsListLv2[5].isChecked;
     }
+
+    public void GetLv3CKPT(List<CheckPoint> list)
+    {
+        CheckPointsListLv3 = list;
+
+        ckpt_box = CheckPointsListLv3[0].isChecked;
+        ckpt_scream = CheckPointsListLv3[1].isChecked;
+        ckpt_bus = CheckPointsListLv3[2].isChecked;
+        
+    }
+
 
     public bool Leve2CKPTResultHE()
     {
@@ -120,5 +138,42 @@ public class Levelckpt : MonoBehaviour
             return false;//�ؿ�2Ĭ��BE-����
         }
         
+    }
+
+    public bool Leve3CKPTResultHE()
+    {
+        if (ckpt_box)
+        {
+            return true;
+        }
+        else
+        {
+            return false;//�ؿ�2Ĭ��BE-����
+        }
+
+    }
+    public bool Level3CKPTResultBE1()
+    {
+        if (ckpt_scream)
+        {
+
+            return true;
+        }
+        else
+        {
+            return false;//�ؿ�2Ĭ��BE-����
+        }
+    }
+    public bool Level3CKPTResultBE2()
+    {
+        if (ckpt_bus)
+        {
+
+            return true;
+        }
+        else
+        {
+            return false;//�ؿ�2Ĭ��BE-����
+        }
     }
 }
