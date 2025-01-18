@@ -71,14 +71,14 @@ public class AvatarControl : MonoBehaviour
     //淡入
     public void FadeIn(GameObject target)
     {
-        Debug.Log($"{target.name}淡入");
+        //Debug.Log($"{target.name}淡入");
         StartCoroutine(FadeTo(target,1f));
     }
 
     //淡出
     public void FadeOut(GameObject target)
     {
-        Debug.Log($"{target.name}淡出");
+        //Debug.Log($"{target.name}淡出");
         StartCoroutine(FadeTo(target,0f));
     }
 
