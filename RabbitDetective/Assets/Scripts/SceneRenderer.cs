@@ -5,8 +5,10 @@ public class SceneRenderer : MonoBehaviour
     [Header("场景存在时间")]
     public float StartTime;
     public float EndTime;
-    [Header("场景实际渲染物体")]
+    [Header("场景实际渲染前、当前、后物体")]
     public GameObject SceneObject;
+    public GameObject LastSceneObject;
+    public GameObject NextSceneObject;
     // Update is called once per frame
     void Update()
     {
@@ -15,8 +17,20 @@ public class SceneRenderer : MonoBehaviour
         {
             SceneObject.SetActive(true);
         }
-        else
+        else if(time > EndTime)
         {
+            if (NextSceneObject != null)
+            {
+                NextSceneObject.SetActive(true);
+            }
+            SceneObject.SetActive(false);
+        }
+        else if (time < StartTime)
+        {
+            if (LastSceneObject != null)
+            {
+                LastSceneObject.SetActive(true);
+            }
             SceneObject.SetActive(false);
         }
     }

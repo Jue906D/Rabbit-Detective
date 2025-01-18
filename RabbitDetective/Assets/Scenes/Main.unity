@@ -6453,6 +6453,8 @@ MonoBehaviour:
   StartTime: 0
   EndTime: 8
   SceneObject: {fileID: 2018769337}
+  LastSceneObject: {fileID: 0}
+  NextSceneObject: {fileID: 949260418}
 --- !u!1 &655234728
 GameObject:
   m_ObjectHideFlags: 0
@@ -9973,12 +9975,12 @@ GameObject:
   m_Component:
   - component: {fileID: 949260419}
   m_Layer: 0
-  m_Name: obj
+  m_Name: s2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &949260419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18926,7 +18928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1646971832
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19001,6 +19003,8 @@ MonoBehaviour:
   StartTime: 8
   EndTime: 15
   SceneObject: {fileID: 949260418}
+  LastSceneObject: {fileID: 2018769337}
+  NextSceneObject: {fileID: 0}
 --- !u!1 &1651161227
 GameObject:
   m_ObjectHideFlags: 0
@@ -20640,6 +20644,8 @@ MonoBehaviour:
   StartTime: 0
   EndTime: 15
   SceneObject: {fileID: 15107075}
+  LastSceneObject: {fileID: 0}
+  NextSceneObject: {fileID: 0}
 --- !u!1 &1752224683
 GameObject:
   m_ObjectHideFlags: 0
@@ -22572,7 +22578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2018769338}
   m_Layer: 0
-  m_Name: obj
+  m_Name: s1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
