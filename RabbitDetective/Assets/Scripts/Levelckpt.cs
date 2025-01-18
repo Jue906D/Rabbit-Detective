@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Levelckpt : MonoBehaviour
@@ -9,12 +10,19 @@ public class Levelckpt : MonoBehaviour
     public bool L1S1Pic_null;
 
     [Header("level02")]
-    public bool ckpt1;//»¢½ÅÓ¡
-    public bool ckpt2;//Ð¬×Ó½ÅÓ¡
-    public bool ckpt3;//ÃÅ¿Õ
-    public bool ckpt4;//ÃÅ»¢
-    public bool ckpt5;//»¢È¡ÏÂ
-    public bool ckpt6;//»­È¡ÏÂ
+    public bool ckpt1;//ï¿½ï¿½ï¿½ï¿½Ó¡
+    public bool ckpt2;//Ð¬ï¿½Ó½ï¿½Ó¡
+    public bool ckpt3;//ï¿½Å¿ï¿½
+    public bool ckpt4;//ï¿½Å»ï¿½
+    public bool ckpt5;//ï¿½ï¿½È¡ï¿½ï¿½
+    public bool ckpt6;//ï¿½ï¿½È¡ï¿½ï¿½
+
+    public static Levelckpt instance;
+    
+     void Awake()
+    {
+        instance = this;
+    }
 
     public bool Level1CKPTResultHE ()
     {
@@ -22,7 +30,7 @@ public class Levelckpt : MonoBehaviour
         {
             return true;
         }
-        return false;//¹Ø¿¨1Ä¬ÈÏBE-ÃÔºý
+        return false;//ï¿½Ø¿ï¿½1Ä¬ï¿½ï¿½BE-ï¿½Ôºï¿½
     }
 
     public bool Leve2CKPTResultHE()
@@ -40,7 +48,7 @@ public class Levelckpt : MonoBehaviour
             return true;
         }
 
-        return false;//¹Ø¿¨2Ä¬ÈÏBE-ÅóÓÑ
+        return false;//ï¿½Ø¿ï¿½2Ä¬ï¿½ï¿½BE-ï¿½ï¿½ï¿½ï¿½
     }
 
     public bool Level2CKPTResultBE1()
@@ -52,7 +60,7 @@ public class Levelckpt : MonoBehaviour
         }
 
 
-        return false;//¹Ø¿¨2Ä¬ÈÏBE-ÅóÓÑ
+        return false;//ï¿½Ø¿ï¿½2Ä¬ï¿½ï¿½BE-ï¿½ï¿½ï¿½ï¿½
     }
     public bool Level2CKPTResultBE2()
     {
@@ -63,7 +71,7 @@ public class Levelckpt : MonoBehaviour
             return true;
         }
 
-        return false;//¹Ø¿¨2Ä¬ÈÏBE-ÅóÓÑ
+        return false;//ï¿½Ø¿ï¿½2Ä¬ï¿½ï¿½BE-ï¿½ï¿½ï¿½ï¿½
     }
     public bool Level2CKPTResultBE3()
     {
@@ -74,6 +82,6 @@ public class Levelckpt : MonoBehaviour
             return true;
         }
 
-        return false;//¹Ø¿¨2Ä¬ÈÏBE-ÅóÓÑ
+        return false;//ï¿½Ø¿ï¿½2Ä¬ï¿½ï¿½BE-ï¿½ï¿½ï¿½ï¿½
     }
 }

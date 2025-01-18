@@ -14,6 +14,9 @@ public class Level : MonoBehaviour
     public List<Item> ItemList;
     [Header("是否是关卡场景")]
     public bool isSceneLevel;
+    public Level lastLevel;
+    public bool hasChanged = false;
+
     [Header("检查点")]
     public List<CheckPoint> CheckPointsList;
     //[Header("场景Ending列表")]
@@ -28,6 +31,7 @@ public class Level : MonoBehaviour
             GameManager.instance.isPaused = false;
         }
         //Obj
+        hasChanged = false;
         LevelObject.SetActive(true);
         SpawnItems();
     }
@@ -70,7 +74,33 @@ public class Level : MonoBehaviour
     public Level TryChangeLevel()
     {
         //test
-        return GameManager.instance.TryGetLevel("Level2_Scene01");
+        //return GameManager.instance.TryGetLevel("Level2_Scene01");
+        if (LevelObject.gameObject.name == "Level1")
+        {
+            if (Levelckpt.instance.Level1CKPTResultHE())
+            {
+                return GameManager.instance.TryGetLevel("Level2");
+            }
+            else
+            {
+                return GameManager.instance.TryGetLevel("DefaultBadEnding");
+            }
+        }
+        else if (LevelObject.gameObject.name == "Level2")
+        {
+            if (Levelckpt.instance.Leve2CKPTResultHE())
+            {
+                return GameManager.instance.TryGetLevel("Level3");
+            }
+            else
+            {
+                return GameManager.instance.TryGetLevel("DefaultBadEnding");
+            }
+        }
+        else
+        {
+            return GameManager.instance.TryGetLevel("DefaultBadEnding");
+        }
     }
     
     public void Update()
@@ -80,8 +110,9 @@ public class Level : MonoBehaviour
             return;
         }
 
-        if (GameManager.instance.TimeNow >= GameManager.instance.TimeAll)
+        if (isSceneLevel && !hasChanged && GameManager.instance.TimeNow >= GameManager.instance.TimeAll)
         {
+            hasChanged = true;
             GameManager.instance.ChangeLevel(TryChangeLevel());
         }
         foreach (var cp in CheckPointsList)

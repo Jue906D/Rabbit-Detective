@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
                 if (LevelList[i] == CurLevel)
                 {
                     CurLevel = LevelList[(i+1)%LevelList.Count];
+                    CurLevel.lastLevel = LevelList[i];
                     break;
                 }
             }
@@ -107,8 +108,13 @@ public class GameManager : MonoBehaviour
 
     public void ChangeLevel(Level newLevel)
     {
+        Level tmp = null;
+        tmp = CurLevel;
+        
         CurLevel.LeaveLevel();
+        Debug.Log($"上一场景{tmp.gameObject.name}，下一场景{newLevel.gameObject.name}");
         CurLevel = newLevel;
+        CurLevel.lastLevel = tmp;
         CurLevel.StartLevel();
     }
 
@@ -116,7 +122,16 @@ public class GameManager : MonoBehaviour
     {
         if (CurLevel is not null)
         {
-            CurLevel.ResetLevel();
+            if (CurLevel.isSceneLevel)
+            {
+                CurLevel.ResetLevel();
+            }
+            else 
+            {
+                Debug.Log($"回到上一个场景{CurLevel.lastLevel.gameObject.name}");
+                ChangeLevel(CurLevel.lastLevel);
+            }
+            
         }
     }
 
