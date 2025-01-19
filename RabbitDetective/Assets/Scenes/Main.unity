@@ -2880,7 +2880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac77084bc826c44cbe612719b474336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 1174333446}
+  SpawnPoint: {fileID: 1442637435}
   CurPoint: {fileID: 0}
   rawSizeData: {x: 0, y: 0}
   state: 1
