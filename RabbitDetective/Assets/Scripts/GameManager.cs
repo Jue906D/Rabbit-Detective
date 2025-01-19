@@ -65,9 +65,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         TimeNowText.text = TimeNow.ToString("0.00");
         TimeAllText.text = TimeAll.ToString("0.00");
         Slider.value = TimeNow / TimeAll;
+        if (TimeNow > TimeAll)
+        {
+            TimeNowText.text = TimeAll.ToString();
+        }
     }
 
     private void LateUpdate()
@@ -123,7 +128,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetAll()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Main");
     }
 
     public void ResetLevel()
