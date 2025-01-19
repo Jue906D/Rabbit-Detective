@@ -16,6 +16,14 @@ public class SceneRenderer : MonoBehaviour
         if (time >= StartTime && time <= EndTime)
         {
             SceneObject.SetActive(true);
+            if (LastSceneObject != null)
+            {
+                LastSceneObject.SetActive(false);
+            }
+            if (NextSceneObject != null)
+            {
+                NextSceneObject.SetActive(false);
+            }
         }
         else if(time > EndTime)
         {
@@ -24,6 +32,11 @@ public class SceneRenderer : MonoBehaviour
                 NextSceneObject.SetActive(true);
             }
             SceneObject.SetActive(false);
+            if (LastSceneObject != null)
+            {
+                LastSceneObject.SetActive(false);
+            }
+            
         }
         else if (time < StartTime)
         {
@@ -32,6 +45,11 @@ public class SceneRenderer : MonoBehaviour
                 LastSceneObject.SetActive(true);
             }
             SceneObject.SetActive(false);
+            if (NextSceneObject != null)
+            {
+                NextSceneObject.SetActive(false);
+            }
+            
         }
     }
 }

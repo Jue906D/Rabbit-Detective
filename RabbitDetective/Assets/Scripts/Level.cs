@@ -34,12 +34,15 @@ public class Level : MonoBehaviour
     public void StartLevel()
     {
         //time
+        
         if (isSceneLevel)
         {
             GameManager.instance.TimeAll = LevelTime;
             GameManager.instance.TimeNow = 0.0f;
             GameManager.instance.isPaused = false;
         }
+        
+
         //Obj
         hasChanged = false;
         LevelObject.SetActive(true);
@@ -153,11 +156,27 @@ public class Level : MonoBehaviour
                 return GameManager.instance.TryGetLevel("DefaultBadEnding_3");
             }
         }
+        else if (LevelObject.gameObject.name == "Level4")
+        {
+            Levelckpt.instance.GetLv4CKPT(CheckPointsList);
+            if (Levelckpt.instance.Level4CKPTResultHE())
+            {
+                Debug.Log("level 4通过，大结局");
+                return GameManager.instance.TryGetLevel("Level4_Fin");
+            }
+            else
+            {
+                Debug.Log("level 4没通过，进DBE4 迷糊");
+                return GameManager.instance.TryGetLevel("DefaultBadEnding_1");
+            }
+        }
         else
         {
             Debug.Log("配置有问题，进常规BE，但是显示迷糊");
             return GameManager.instance.TryGetLevel("DefaultBadEnding_1");
         }
+
+
     }
     
     public void Update()

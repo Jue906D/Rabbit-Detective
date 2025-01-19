@@ -26,6 +26,11 @@ public class Levelckpt : MonoBehaviour
     public bool ckpt_bus;
     public List<CheckPoint> CheckPointsListLv3;
 
+    [Header("level04")]
+    public bool ckpt_fin;
+    public List<CheckPoint> CheckPointsListLv4;
+
+
 
     public static Levelckpt instance;
     
@@ -69,12 +74,19 @@ public class Levelckpt : MonoBehaviour
     {
         CheckPointsListLv3 = list;
 
-        ckpt_box = CheckPointsListLv3[0].isChecked;
-        ckpt_scream = CheckPointsListLv3[1].isChecked;
-        ckpt_bus = CheckPointsListLv3[2].isChecked;
+        ckpt_box = CheckPointsListLv3[1].isChecked;
+        ckpt_scream = CheckPointsListLv3[2].isChecked;
+        ckpt_bus = CheckPointsListLv3[3].isChecked;
         
     }
+    public void GetLv4CKPT(List<CheckPoint> list)
+    {
+        CheckPointsListLv4 = list;
 
+        ckpt_fin = CheckPointsListLv4[0].isChecked;
+
+
+    }
 
     public bool Leve2CKPTResultHE()
     {
@@ -176,4 +188,20 @@ public class Levelckpt : MonoBehaviour
             return false;//�ؿ�2Ĭ��BE-����
         }
     }
+
+
+    public bool Level4CKPTResultHE()
+    {
+        if (ckpt_fin)
+        {
+            return true;
+        }
+        
+        else
+        {
+            return false;//�ؿ�2Ĭ��BE-����
+        }
+
+    }
+
 }
