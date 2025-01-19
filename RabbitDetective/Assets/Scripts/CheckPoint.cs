@@ -49,6 +49,12 @@ public class CheckPoint : MonoBehaviour
     {
         bool check = false;
         bool acheck = false;
+
+        if (CheckPointLines.Count == 0)
+        {
+            return true;
+        }
+        
         foreach (var checkPointLine in CheckPointLines)
         {
             var p = checkPointLine.spoint;

@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     [Header("Level序列")]
     public Level CurLevel;
     public List<Level> LevelList;
+
+    public Vector2 sizeDataLimit;
     
 
     void Awake()

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 180e191dfd25bf84fa09bd6b3b41752b
+guid: 2a381973d1031424c9b26e499953a582
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2377991650976722973
-    second: ground_asphalt_synth_02_0
+      213: 2409796930927153384
+    second: Bd2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ground_asphalt_synth_02_0
+      name: Bd2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 1855
+        height: 760
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ef00bc413daffed0800000000000000
-      internalID: -2377991650976722973
+      spriteID: 8e05db08a81517120800000000000000
+      internalID: 2409796930927153384
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ground_asphalt_synth_02_0: -2377991650976722973
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

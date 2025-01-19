@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 180e191dfd25bf84fa09bd6b3b41752b
+guid: cbdf21bfbb9379f4f85b8e5cd2db0977
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2377991650976722973
-    second: ground_asphalt_synth_02_0
+      213: 491653484470482865
+    second: CHONGZHIANNIU_0
+  - first:
+      213: 917230255867262561
+    second: CHONGZHIANNIU_1
+  - first:
+      213: 2115744573291970385
+    second: CHONGZHIANNIU_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ground_asphalt_synth_02_0
+      name: CHONGZHIANNIU_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 0
-        width: 1024
-        height: 1024
+        width: 56
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ef00bc413daffed0800000000000000
-      internalID: -2377991650976722973
+      spriteID: 1b7327e3d34b2d600800000000000000
+      internalID: 491653484470482865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHONGZHIANNIU_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 102
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166753ade08aabc00800000000000000
+      internalID: 917230255867262561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHONGZHIANNIU_2
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 104
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f378eca72ac5d10800000000000000
+      internalID: 2115744573291970385
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ground_asphalt_synth_02_0: -2377991650976722973
+      CHONGZHIANNIU_0: 491653484470482865
+      CHONGZHIANNIU_1: 917230255867262561
+      CHONGZHIANNIU_2: 2115744573291970385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

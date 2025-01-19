@@ -13,7 +13,8 @@ public class Ending : MonoBehaviour
 
     void Awake()
     {
-        gameObject.GetComponent<Button>().onClick.AddListener(delegate { isClicked = true; });
+        if(gameObject.GetComponent<Button>())
+            gameObject.GetComponent<Button>().onClick.AddListener(delegate { isClicked = true; });
     }
     public void Activate()
     {
