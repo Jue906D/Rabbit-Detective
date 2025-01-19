@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using FluffyUnderware.Curvy.Controllers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
     public List<Level> LevelList;
 
     public Vector2 sizeDataLimit;
-    
+    public bool FastBeginning = false;
 
     void Awake()
     {
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
             level.LevelObject.SetActive(false);
         }
         StartGameButton.onClick.AddListener(ChangeLevel);
-        ResetButton.onClick.AddListener(ResetLevel);
+        ResetButton.onClick.AddListener(ResetAll);
         ChangeLevel();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -118,6 +119,11 @@ public class GameManager : MonoBehaviour
         CurLevel = newLevel;
         CurLevel.lastLevel = tmp;
         CurLevel.StartLevel();
+    }
+
+    public void ResetAll()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void ResetLevel()

@@ -10,12 +10,12 @@ public class Point : MonoBehaviour
     
     void OnEnable()
     {
-        GameManager.instance.PointDict.Add(gameObject.name,this);
+        //GameManager.instance.PointDict.Add(gameObject.name,this);
     }
 
     void OnDisable()
     {
-        GameManager.instance.PointDict.Remove(gameObject.name);
+        //GameManager.instance.PointDict.Remove(gameObject.name);
     }
     public virtual void AttachItem(Item item)
     {

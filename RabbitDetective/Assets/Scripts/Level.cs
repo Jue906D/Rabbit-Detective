@@ -21,7 +21,14 @@ public class Level : MonoBehaviour
 
     [Header("检查点")]
     public List<CheckPoint> CheckPointsList;
-    
+
+    void Start()
+    {
+        foreach (var p in PointList)
+        {
+            GameManager.instance.PointDict.Add(p.gameObject.name,p);
+        }
+    }
     //[Header("场景Ending列表")]
     //public List<Ending> EndingList;
     public void StartLevel()
@@ -52,6 +59,7 @@ public class Level : MonoBehaviour
             if (item.CurPoint is not null)
             {
                 item.CurPoint.DetachItem(item);
+                item.ScaleAutoFit(false);
             }
             item.gameObject.SetActive(false);
         }
@@ -124,12 +132,7 @@ public class Level : MonoBehaviour
         else if (LevelObject.gameObject.name == "Level3")
         {
             Levelckpt.instance.GetLv3CKPT(CheckPointsList);
-            if (Levelckpt.instance.Leve3CKPTResultHE())
-            {
-                Debug.Log("level 3通过，进4");
-                return GameManager.instance.TryGetLevel("Level4");
-            }
-            else if (Levelckpt.instance.Level3CKPTResultBE1())
+            if (Levelckpt.instance.Level3CKPTResultBE1())
             {
                 Debug.Log("level 3没通过，进BE1");
                 return GameManager.instance.TryGetLevel("Level3BadEnding_1");
@@ -138,6 +141,11 @@ public class Level : MonoBehaviour
             {
                 Debug.Log("level 3没通过，进BE2");
                 return GameManager.instance.TryGetLevel("Level3BadEnding_2");
+            }
+            else if (Levelckpt.instance.Leve3CKPTResultHE())
+            {
+                Debug.Log("level 3通过，进4");
+                return GameManager.instance.TryGetLevel("Level4");
             }
             else
             {
